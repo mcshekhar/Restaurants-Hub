@@ -1,0 +1,27 @@
+<div>
+  <div>
+      <md-toolbar color="primary">Restaurants Hub
+          <span class="spacer"></span>
+             <button md-icon-button [mdMenuTriggerFor]="menu">
+                <md-icon>more_vert</md-icon>
+              </button>
+            <md-menu #menu="mdMenu">
+              <button md-menu-item routerLink="/home" routerLinkActive="active">
+                <md-icon>home</md-icon>
+                <span>Home</span>
+              </button>
+              <button md-menu-item routerLink="/restaurants" routerLinkActive="active">
+              <md-icon>local_dining</md-icon>
+                <span>Restaurants</span>
+              </button>
+              <button md-menu-item routerLink="/restaurant" routerLinkActive="active">
+                  <md-icon>dehaze</md-icon>
+                    <span>Restaurant Details</span>
+                  </button>
+            </md-menu>
+      </md-toolbar>
+  </div>
+  <md-card>
+      <router-outlet></router-outlet>
+  </md-card>
+</div>
